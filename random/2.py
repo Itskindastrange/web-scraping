@@ -19,10 +19,12 @@ cookie = driver.find_element(By.ID ,"bigCookie")
 #cookie_count = driver.find_elements(By.ID,"cookies")
 
 #items = [driver.find_element(By.ID,'productPrice' + str(i)) for i in range(1,-1,-1)]
-actions = ActionChains(driver)
-actions.click(cookie)
+
+
 
 for i in range(1000):
+    actions = ActionChains(driver)
+    actions.click(cookie)
     actions.perform()
 #     for element in cookie_count:
 #         count = int(element.text.split(" ")[0])
